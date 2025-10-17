@@ -364,6 +364,140 @@ nav ul li a:hover {
     margin-right: 8px;
 }
 
+/* ===== BLOG PAGE ===== */
+.blog-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.blog-hero {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.blog-hero h1 {
+  margin: 0 0 8px;
+}
+.blog-hero p {
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Blog grid/cards */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-card-content {
+  padding: 16px 18px 18px;
+}
+
+.blog-card h2 {
+  font-size: 1.25rem;
+  margin: 6px 0 6px;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0 0 8px;
+}
+
+.blog-excerpt {
+  margin: 0 0 14px;
+}
+
+.read-more {
+  margin-top: auto;
+  align-self: flex-start;
+  background: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color .2s ease, transform .2s ease;
+}
+.read-more:hover {
+  background: #6f3610;
+  transform: translateY(-1px);
+}
+
+/* Active link state for Blog in nav */
+nav ul li a.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Small tweaks on mobile */
+@media (max-width: 768px) {
+  .blog-page { padding: 40px 20px; }
+  .blog-card img { height: 160px; }
+}
+/* === Blog Post Styling === */
+.blog-post-container {
+  max-width: 800px;  /* Sets a comfortable reading width */
+  margin: 40px auto; /* Centers the container on the page */
+  padding: 0 20px;   /* Adds space on the sides for smaller screens */
+}
+
+.blog-post-container h1 {
+  font-size: 2.5em; /* Makes the title stand out */
+  margin-bottom: 0.5em;
+}
+
+.blog-post-container .post-meta {
+  color: #666;
+  margin-bottom: 2em;
+  font-style: italic;
+}
+
+.blog-post-container .post-content {
+  line-height: 1.7;    /* Increases space between lines for readability */
+  font-size: 1.1em;
+}
+
+.blog-post-container img {
+  max-width: 100%;     /* Ensures images don't overflow the container */
+  height: auto;
+  margin: 2em 0;     /* Adds space above and below the image */
+  border-radius: 8px;
+}
+
+.back-to-blog {
+  display: inline-block;
+  margin-top: 2em;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-to-blog:hover {
+  text-decoration: underline;
+}
 /* Footer */
 footer {
     background: var(--secondary-color);

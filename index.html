@@ -9,19 +9,17 @@
 </head>
 <body>
 
-    <!-- START OF CORRECTED HEADER -->
 <header>
     <nav>
         <a href="index.html" class="logo">Karson's Portfolio</a>
 
-        <!-- Desktop Navigation -->
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
         </ul>
 
-        <!-- The Hamburger Button for Mobile (goes INSIDE the nav) -->
         <div class="hamburger-menu" id="hamburgerMenu">
             <span></span>
             <span></span>
@@ -30,7 +28,6 @@
     </nav>
 </header>
 
-<!-- The Mobile Navigation Overlay (goes AFTER the header) -->
 <div class="mobile-nav" id="mobileNav">
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -38,10 +35,8 @@
 </div>
 
 <main>
-    <!-- Your hero section starts here... -->
 
     <main>
-       <!-- START OF NEW MINIMALIST HERO SECTION -->
     <section class="hero">
         <div class="background-shapes">
             <div class="shape shape-1"></div>
@@ -54,7 +49,6 @@
             <a href="#projects" class="btn">View My Work</a>
         </div>
     </section>
-        <!-- END OF NEW HERO SECTION -->
 
         <section id="about" class="about">
             <h2>About Me</h2>
@@ -75,7 +69,6 @@
         <section id="projects" class="projects">
             <h2>My Projects</h2>
             <div class="project-grid">
-                <!-- Project cards remain here..2. -->
                 <div class="project-card project-1">
                     <img src="image/tradeicon.png" alt="Congress Trading Bot">
                     <h3>Congress Trades Discord Bot</h3>
@@ -123,7 +116,6 @@
         </section>
     </main>
     
-        <!-- Bottom right button-->
         <a href="#" id="scrollToTopBtn" class="scroll-to-top">
             <i class="fas fa-arrow-up"></i>
         </a>
@@ -136,9 +128,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-            // Show or hide the button based on scroll position
             window.addEventListener('scroll', function() {
-                if (window.scrollY > 300) { // Show button after scrolling 300px
+                if (window.scrollY > 300) {
                     scrollToTopBtn.classList.add('visible');
                 } else {
                     scrollToTopBtn.classList.remove('visible');
@@ -153,12 +144,10 @@
             const mobileNav = document.getElementById('mobileNav');
             const mobileNavLinks = mobileNav.querySelectorAll('a');
 
-            // Toggle menu on hamburger click
             hamburgerMenu.addEventListener('click', function() {
                 document.body.classList.toggle('mobile-nav-active');
             });
 
-            // Close menu when a link is clicked
             mobileNavLinks.forEach(link => {
                 link.addEventListener('click', function() {
                     document.body.classList.remove('mobile-nav-active');
